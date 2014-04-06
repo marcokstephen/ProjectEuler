@@ -1,1 +1,21 @@
-Project Euler solutions
+## Project Euler Solutions
+
+- **[Problem 1 (Java)](Solutions/Problem1.java)**
+- **[Problem 1 (C)](Solutions/Problem1.c)**
+- **[Problem 1 (Python)](Solutions/Problem1.py)**
+- **[Problem 2 (Java)](Solutions/Problem2.java)**
+- **[Problem 2 (Python)](Solutions/Problem2.py)**
+- **[Problem 3 (Python)](Solutions/Problem3.py)**
+- **[Problem 6 (Racket)](Solutions/Problem6.rkt)**
+- **[Problem 7 (C)](Solutions/Problem7.c)**
+- **[Problem 8 (C)](Solutions/Problem8.c)**
+- **[Problem 9 (C)](Solutions/Problem9.c)**
+- **[Problem 10 (Java)](Solutions/Problem10.java)**
+- **[Problem 11 (Java)](Solutions/Problem11.java)**
+- **[Problem 12 (Java)](Solutions/Problem12.java)**
+- **[Problem 13 (Racket)](Solutions/Problem13.rkt)**
+- **[Problem 14 (C)](Solutions/Problem14.c)**
+- **[Problem 15 (TXT)](Solutions/Problem15.txt)**
+- **[Problem 16 (Racket)](Solutions/Problem16.rkt)**
+- **[Problem 17 (Java)](Solutions/Problem17.java)**
+- **[Problem 20 (Racket)](Solutions/Problem20.rkt)**
