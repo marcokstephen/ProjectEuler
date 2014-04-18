@@ -18,4 +18,5 @@
 - **[Problem 15 (TXT)](Solutions/Problem15.txt)**
 - **[Problem 16 (Racket)](Solutions/Problem16.rkt)**
 - **[Problem 17 (Java)](Solutions/Problem17.java)**
+- **[Problem 18 (C)](Solutions/Problem19.c)**
 - **[Problem 20 (Racket)](Solutions/Problem20.rkt)**
