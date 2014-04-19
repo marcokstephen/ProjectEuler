@@ -20,3 +20,4 @@
 - **[Problem 17 (Java)](Solutions/Problem17.java)**
 - **[Problem 19 (C)](Solutions/Problem19.c)**
 - **[Problem 20 (Racket)](Solutions/Problem20.rkt)**
+- **[Problem 21 (C)](Solutions/Problem21.c)**
