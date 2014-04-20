@@ -36,18 +36,6 @@ struct list* get_divisors(int n){
    return new;
 }
 
-void destroyListNodes(struct llnode* node){
-   while (node->next != NULL){
-      destroyListNodes(node->next);
-   }
-   free(node);
-}
-
-void destroyList(struct list* list){
-   destroyListNodes(list->front);
-   free(list);
-}
-
 int sumDivisors(int n){
    int sum = 0;
    struct list* divisors = get_divisors(n);
