@@ -6,6 +6,7 @@
 - **[Problem 2 (Java)](Solutions/Problem2.java)**
 - **[Problem 2 (Python)](Solutions/Problem2.py)**
 - **[Problem 3 (Python)](Solutions/Problem3.py)**
+- **[Problem 4 (Java)](Solutions/Problem4.java)**
 - **[Problem 5 (TXT)](Solutions/Problem5.txt)**
 - **[Problem 6 (Racket)](Solutions/Problem6.rkt)**
 - **[Problem 7 (C)](Solutions/Problem7.c)**
