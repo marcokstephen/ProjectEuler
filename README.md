@@ -27,4 +27,5 @@
 - **[Problem 22 (C)](Solutions/Problem22.c)**
 - **[Problem 23 (C)](Solutions/Problem23.c)**
 - **[Problem 24 (TXT)](Solutions/Problem24.txt)**
+- **[Problem 25 (Racket)](Solutions/Problem25.rkt)**
 - **[Problem 67 (C)](Solutions/Problem67.c)**
