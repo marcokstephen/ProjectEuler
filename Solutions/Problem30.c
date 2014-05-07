@@ -1,6 +1,5 @@
-/* This code finds the answer very quickly, but I'm not yet sure how to prove that this is the
-correct answer. The code uses brute force to test all numbers, and needs to be manually stopped.
-Basically I am "guessing" that the most recent number it finds is in fact the correct answer. */
+/* This code "guesses" the answer, because I haven't yet proven the upper limit. The guess is correct,
+but not yet proven. */
 
 #include <stdio.h>
 #include <math.h>
@@ -14,7 +13,7 @@ struct dynarray{
 
 struct dynarray* create_array(void){
   struct dynarray* dynarray = malloc(sizeof(struct dynarray));
-  int* data = malloc(sizeof(int) * 12); //assumes no number greater than 12 digits (999 billion)
+  int* data = malloc(sizeof(int) * 6);
   dynarray->data = data;
   dynarray->len = 0;
 }
@@ -26,7 +25,7 @@ struct dynarray* numToDigits(int num){
   if (value < 10){
     array->data[currentPosition] = pow(value,5);
     currentPosition++;
-  } else { //value > 19
+  } else {
     while (value >= 10){
       array->data[currentPosition] = pow((value%10),5);
       value /= 10;
@@ -35,14 +34,6 @@ struct dynarray* numToDigits(int num){
     array->data[currentPosition] = pow(value,5);
   }
   array->len = currentPosition;
-}
-
-void print_array(struct dynarray* array){
-  int length = array->len;
-  for (int i = 0; i <= length; i++){
-    printf("%d ",array->data[i]);
-  }
-  printf("\n");
 }
 
 void destroy_array(struct dynarray* array){
@@ -61,7 +52,7 @@ int sum_array(struct dynarray* array){
 int main(void){
   int currentTest = 2;
   int finalSum = 0;
-  while(1){
+  for (int i = 0; i < 999999; i++)){
     struct dynarray* number = numToDigits(currentTest);
     if (sum_array(number) == currentTest){
       printf("%d",currentTest);
