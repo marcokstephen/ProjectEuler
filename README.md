@@ -1,7 +1,6 @@
 ## Project Euler Solutions
 
-- **[Problem 1 (Java)](Solutions/Problem1.java)**
-- **[Problem 1 (C)](Solutions/Problem1.c)**
+- **[Problem 1 (Bash)](Solutions/Problem1.sh)**
 - **[Problem 1 (Python)](Solutions/Problem1.py)**
 - **[Problem 2 (Java)](Solutions/Problem2.java)**
 - **[Problem 2 (Python)](Solutions/Problem2.py)**
@@ -29,6 +28,7 @@
 - **[Problem 24 (TXT)](Solutions/Problem24.txt)**
 - **[Problem 25 (Racket)](Solutions/Problem25.rkt)**
 - **[Problem 28 (Java)](Solutions/Problem28.java)**
+- **[Problem 29 (Racket)](Solutions/Problem29.rkt)**
 - **[Problem 48 (Racket)](Solutions/Problem48.rkt)**
 - **[Problem 67 (C)](Solutions/Problem67.c)**
 
