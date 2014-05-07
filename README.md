@@ -29,6 +29,7 @@
 - **[Problem 25 (Racket)](Solutions/Problem25.rkt)**
 - **[Problem 28 (Java)](Solutions/Problem28.java)**
 - **[Problem 29 (Racket)](Solutions/Problem29.rkt)**
+- **[Problem 30 (C)](Solutions/Problem30.c)**
 - **[Problem 48 (Racket)](Solutions/Problem48.rkt)**
 - **[Problem 67 (C)](Solutions/Problem67.c)**
 
