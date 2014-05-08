@@ -27,12 +27,12 @@
 - **[Problem 23 (C)](Solutions/Problem23.c)**
 - **[Problem 24 (TXT)](Solutions/Problem24.txt)**
 - **[Problem 25 (Racket)](Solutions/Problem25.rkt)**
+- **[Problem 27 (C)](Solutions/Problem27.c)**
 - **[Problem 28 (Java)](Solutions/Problem28.java)**
 - **[Problem 29 (Racket)](Solutions/Problem29.rkt)**
 - **[Problem 30 (C)](Solutions/Problem30.c)**
 - **[Problem 34 (Racket)](Solutions/Problem34.rkt)**
+- **[Problem 35 (Racket)](Solutions/Problem35.rkt)**
 - **[Problem 36 (Racket)](Solutions/Problem36.rkt)**
 - **[Problem 48 (Racket)](Solutions/Problem48.rkt)**
 - **[Problem 67 (C)](Solutions/Problem67.c)**
-
-![alt text](http://projecteuler.net/profile/marcok.stephen.png)
