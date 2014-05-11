@@ -40,5 +40,7 @@
 - **[Problem 39 (Java)](Solutions/Problem39.java)**
 - **[Problem 40 (C)](Solutions/Problem40.c)**
 - **[Problem 41 (Python)](Solutions/Problem41.py)**
+- **[Problem 42 (Python)](Solutions/Problem42.py)**
 - **[Problem 48 (Racket)](Solutions/Problem48.rkt)**
+- **[Problem 50 (Java)](Solutions/Problem50.java)**
 - **[Problem 67 (C)](Solutions/Problem67.c)**
