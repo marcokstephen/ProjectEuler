@@ -51,4 +51,6 @@
 - **[Problem 53 (Racket)](Solutions/Problem53.rkt)**
 - **[Problem 55 (Racket)](Solutions/Problem55.rkt)**
 - **[Problem 67 (C)](Solutions/Problem67.c)**
+- **[Problem 81 (C)](Solutions/Problem81.c)**
+- **[Problem 92 (Racket)](Solutions/Problem92.rkt)**
 - **[Problem 100 (Racket)](Solutions/Problem100.rkt)**
