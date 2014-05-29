@@ -1,0 +1,11 @@
+This problem is very easy to brute force by hand.
+
+319
+316980
+3126980
+3162980
+31762980
+31762890
+73162890
+
+By the twelfth line of keylog.txt, you have the answer.
