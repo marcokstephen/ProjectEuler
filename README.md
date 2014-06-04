@@ -59,6 +59,7 @@
 - **[Problem 92 (Racket)](Solutions/Problem92.rkt)**
 - **[Problem 100 (Racket)](Solutions/Problem100.rkt)**
 - **[Problem 112 (Java)](Solutions/Problem112.java)**
+- **[Problem 124 (Racket)](Solutions/Problem124.rkt)**
 - **[Problem 179 (Java)](Solutions/Problem179.java)**
 - **[Problem 203 (Racket)](Solutions/Problem203.rkt)**
 - **[Problem 206 (Racket)](Solutions/Problem206.rkt)**
