@@ -56,6 +56,7 @@
 - **[Problem 57 (Python)](Solutions/Problem57.py)**
 - **[Problem 58 (Java)](Solutions/Problem58.java)**
 - **[Problem 63 (Racket)](Solutions/Problem63.rkt)**
+- **[Problem 65 (Python)](Solutions/Problem65.py)**
 - **[Problem 67 (C)](Solutions/Problem67.c)**
 - **[Problem 69 (Racket)](Solutions/Problem69.rkt)**
 - **[Problem 74 (Racket)](Solutions/Problem74.rkt)**
