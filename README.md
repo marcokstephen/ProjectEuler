@@ -64,6 +64,7 @@
 - **[Problem 79 (TXT)](Solutions/Problem79.txt)**
 - **[Problem 80 (Racket)](Solutions/Problem80.rkt)**
 - **[Problem 81 (C)](Solutions/Problem81.c)**
+- **[Problem 85 (Java)](Solutions/Problem85.java)**
 - **[Problem 87 (Racket)](Solutions/Problem87.rkt)**
 - **[Problem 89 (Java)](Solutions/Problem89.java)**
 - **[Problem 92 (Racket)](Solutions/Problem92.rkt)**
