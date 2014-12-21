@@ -9,7 +9,7 @@ public class Problem85 {
         int minDifferenceW = 0;
 
         for (int h = 1; h < 100; h++){
-            for (int w = 1; w < 100; w++){
+            for (int w = h; w < 100; w++){
                 int numberOfRectangles = getNumRectangles(h,w);
                 int difference = Math.abs(numberOfRectangles - TARGET);
 
