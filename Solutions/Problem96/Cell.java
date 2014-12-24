@@ -6,6 +6,9 @@ public class Cell{
     private boolean assigned;
     private List<Integer> possibles;
 
+    //Value is 0 if the cell is not definitely assigned, otherwise it is the value of the cell
+    //Assigned is true if the cell is definitely assigned, false otherwise
+    //possibles is a list of integers that that the cell could be, if it is not already assigned
     public Cell(int v){
         value = v;
         possibles = new ArrayList<Integer>();

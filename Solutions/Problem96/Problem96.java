@@ -7,7 +7,10 @@ import java.util.List;
 public class Problem96 {
 
     public static void main(String[] args) throws IOException{
-        String b = "100920000524010000000000070050008102000000000402700090060000000000030945000071006";
+
+        //The methods in main are used for processing data unique to the ProjectEuler component of this problem
+        //The method "solveBoard" is used for actually solving the sudoku puzzle
+
         BufferedReader br = new BufferedReader(new FileReader("/Users/stephen/Downloads/p096_sudoku.txt"));
         String line = "";
         int solution = 0;
@@ -23,8 +26,6 @@ public class Problem96 {
                 puzzleSolution *= 10;
                 puzzleSolution += cellValue;
             }
-            printGameBoard(board);
-            System.out.println("\n the puzzle solution is " + puzzleSolution);
             solution += puzzleSolution;
         }
         System.out.println("\n"+solution);
@@ -254,12 +255,17 @@ public class Problem96 {
                 numberSolved++;
             }
         }
-        System.out.print("\n\nNumber solved: " + numberSolved);
+        System.out.print("\n\nNumber solved: " + numberSolved); //the number of cells that are solved
     }
 
+    //Solves the board recursively after solveLogically has completed
+    //as much as possible. Uses recursive backtracking. Assigns a "parent board"
+    //to each Board object, and if the current Board is deemed unsolvable, we
+    //revert to the parentBoard and try to solve that instead
     public static Board solveRecursively(Board b){
         Cell[] cells = b.getCells();
 
+        //finds the first Cell index that is not assigned a definite value
         int indexFirstNonAssigned = -1;
         for (int i = 0; i < cells.length; i++){
             if (!cells[i].isAssigned()){
@@ -268,20 +274,34 @@ public class Problem96 {
             }
         }
 
+        //Clones the board so that we can make guesses on it
         Board newBoard = cloneBoard(b);
+        //if a Cell is not assigned and its possibleList is empty, then the board
+        //must not be valid and we should revert to the parentBoard
         if (b.getCells()[indexFirstNonAssigned].getPossibles().size() == 0){
             return solveRecursively(b.getParentBoard());
         }
+        //moving one step closer to a base case by removing a single possibleValue from
+        //the parentBoard. We can do this safely because by the time we use this parentBoard, we would have extensively
+        //tried solving the board using the possibleValue that we are removing.
         int valueToTry = b.getCells()[indexFirstNonAssigned].getPossibles().remove(0);
         newBoard.setParentBoard(b);
         Cell[] newBoardCells = newBoard.getCells();
 
+        //assigning the cell on the cloned board to be one of the values on the possibleList
         Cell newCell = newBoardCells[indexFirstNonAssigned];
         newCell.setValue(valueToTry);
         newCell.setAssigned(true);
         newCell.setPossibles(new ArrayList<Integer>());
+        //after we have made an attempt, we try to solve logically again to see if there is
+        //any new progress
         solveLogically(newBoard);
 
+        //check if the board is solved. If the board is solved, we can return the board.
+        //If the board is not solved but still valid (we have not broken the rule of an int
+        //appearing more than once in a group) then we can progress with our recursive method
+        //If the board is no longer valid, we need to backtrack and try the recursive method with
+        //the parentBoard
         if (isBoardSolved(newBoard)){
             return newBoard;
         } else if (isBoardValid(newBoard)) {
@@ -289,28 +309,6 @@ public class Problem96 {
         } else {
             return solveRecursively(newBoard.getParentBoard());
         }
-
-
-        /*
-        Cell oldCell = cells[indexFirstNonAssigned];
-        Cell newCell = newBoardCells[indexFirstNonAssigned];
-        for (int i = 0; i < oldCell.getPossibles().size(); i++){
-            newCell.setValue(oldCell.getPossibles().get(i));
-            newCell.setAssigned(true);
-            newCell.setPossibles(new ArrayList<Integer>());
-            solveLogically(newBoard);
-            if (isBoardSolved(newBoard)){
-                //it is complete, the board is solved
-            } else if (isBoardValid(b)){
-                //the board is valid and we can continue
-            } else if (i == oldCell.getPossibles().size()) {
-                //the board is not valid and we have exhausted
-                //possible solutions, we must try the next element of
-                //the parent possibleList
-            } else {
-                //the board is not valid, move to the next element of the possible list
-            }
-        }*/
     }
 
     //Helper method used for solving recursively
@@ -348,7 +346,7 @@ public class Problem96 {
         return true;
     }
 
-    //Returns true if a board is completely solved
+    //Returns true if a board is completely solved (isAssigned == true) for every cell
     //False otherwise
     public static boolean isBoardSolved(Board b){
         Cell[] c = b.getCells();

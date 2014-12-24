@@ -3,6 +3,8 @@ public class Board {
     private Cell[] cells;
     private Board parentBoard;
 
+    //parentBoard is only required when solving recursively
+    //therefore it is only set with setParentBoard instead of the constructor
     public Board(String s){
         this.parentBoard = null;
         cells = new Cell[81];
@@ -64,6 +66,7 @@ public class Board {
         return getSquare(getSquareNumberFromIndex(a));
     }
 
+    //returns a Cell[] of the cells in the square with index a
     public Cell[] getSquare(int a){
         Cell[] cellArray = new Cell[9];
         int counter = 0;
@@ -89,6 +92,8 @@ public class Board {
         return cellArray;
     }
 
+    //using the board's cell index (0-80), finds the
+    //index of the corresponding square (0-8)
     public int getSquareNumberFromIndex(int a){
         int row = a/9;
         int column = a%9;
