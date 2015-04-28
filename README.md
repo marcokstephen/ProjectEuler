@@ -32,6 +32,7 @@
 - **[Problem 28 (Java)](Solutions/Problem28.java)**
 - **[Problem 29 (Racket)](Solutions/Problem29.rkt)**
 - **[Problem 30 (C)](Solutions/Problem30.c)**
+- **[Problem 31 (CPP)](Solutions/Problem31.cpp)**
 - **[Problem 32 (C)](Solutions/Problem32.c)**
 - **[Problem 33 (Python)](Solutions/Problem33.py)**
 - **[Problem 34 (Racket)](Solutions/Problem34.rkt)**
