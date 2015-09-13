@@ -45,6 +45,7 @@
 - **[Problem 41 (Python)](Solutions/Problem41.py)**
 - **[Problem 42 (Python)](Solutions/Problem42.py)**
 - **[Problem 43 (Java)](Solutions/Problem43.java)**
+- **[Problem 44 (C++)](Solutions/Problem44.cpp)**
 - **[Problem 46 (C)](Solutions/Problem46.c)**
 - **[Problem 47 (C)](Solutions/Problem47.c)**
 - **[Problem 48 (Racket)](Solutions/Problem48.rkt)**
