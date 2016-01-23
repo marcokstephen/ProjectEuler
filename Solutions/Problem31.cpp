@@ -1,57 +1,26 @@
+// This is a combinatoric approach, the recursive formula was found by using the product lemma
+// and using WolframAlpha to evaluate "expand (1-x)(1-x^2)(1-x^5)(1-x^10)(1-x^20)(1-x^50)(1-x^100)(1-x^200)"
+
 #include <iostream>
 
 using namespace std;
 
-int main(){
-    const int AMOUNT = 200;
-    int numSolutions = 0;
-    int amt = 0;
-    for (int one = 0; one <= AMOUNT; one++){
-        int oneTempAmt = amt;
-        amt += one;
-        if (amt > AMOUNT) break;
-        for (int two = 0; two <= AMOUNT; two+=2){
-            int twoTempAmt = amt;
-            amt += two;
-            if (amt > AMOUNT) break;
-            for (int five = 0; five <= AMOUNT; five+=5){
-                int fiveTempAmt = amt;
-                amt += five;
-                if (amt > AMOUNT) break;
-                for (int ten = 0; ten <= AMOUNT; ten+=10){
-                    int tenTempAmt = amt;
-                    amt+= ten;
-                    if (amt > AMOUNT) break;
-                    for (int twenty = 0; twenty <= AMOUNT; twenty+=20){
-                        int twentyTempAmt = amt;
-                        amt += twenty;
-                        if (amt > AMOUNT) break;
-                        for (int fifty = 0; fifty <= AMOUNT; fifty+=50){
-                            int fiftyTempAmt = amt;
-                            amt += fifty;
-                            if (amt > AMOUNT) break;
-                            for (int hun = 0; hun <= AMOUNT; hun+=100){
-                                int hunTempAmt = amt;
-                                amt += hun;
-                                if (amt > AMOUNT) break;
-                                for (int twoHun = 0; twoHun <= AMOUNT; twoHun+=200){
-                                    amt += twoHun;
-                                    if (amt > AMOUNT) break;
-                                    if (amt == AMOUNT) numSolutions++;
-                                }
-                                amt = hunTempAmt;
-                            }
-                            amt = fiftyTempAmt;
-                        }
-                        amt = twentyTempAmt;
-                    }
-                    amt = tenTempAmt;
-                }
-                amt = fiveTempAmt;
-            }
-            amt = twoTempAmt;
-        }
-        amt = oneTempAmt;
+int* arr;
+
+int a(int n) {
+    if (n < 0) {
+        return 0;
+    } else if (n == 0) {
+        return 1;
+    } else if (arr[n] != 0) {
+        return arr[n];
+    } else {
+        arr[n] = a(n-1) + a(n-2) - a(n-3) + a(n-5) - a(n-6) - a(n-7) + a(n-8) + a(n-10) - a(n-11) - a(n-12) + a(n-13) - a(n-15) + a(n-16) + a(n-17) - a(n-18) + a(n-20) - a(n-21) - a(n-22) + a(n-23) - a(n-25) + a(n-26) + a(n-27) - a(n-28) - a(n-30) + a(n-31) + a(n-32) - a(n-33) + a(n-35) - a(n-36) - a(n-37) + a(n-38) + a(n-50) - a(n-51) - a(n-52) + a(n-53) - a(n-55) + a(n-56) + a(n-57) - a(n-58) - a(n-60) + a(n-61) + a(n-62) - a(n-63) + a(n-65) - a(n-66) - a(n-67) + a(n-68) - a(n-70) + a(n-71) + a(n-72) - a(n-73) + a(n-75) - a(n-76) - a(n-77) + a(n-78) + a(n-80) - a(n-81) - a(n-82) + a(n-83) - a(n-85) + a(n-86) + a(n-87) - a(n-88) + a(n-100) - a(n-101) - a(n-102) + a(n-103) - a(n-105) + a(n-106) + a(n-107) - a(n-108) - a(n-110) + a(n-111) + a(n-112) - a(n-113) + a(n-115) - a(n-116) - a(n-117) + a(n-118) - a(n-120) + a(n-121) + a(n-122) - a(n-123) + a(n-125) - a(n-126) - a(n-127) + a(n-128) + a(n-130) - a(n-131) - a(n-132) + a(n-133) - a(n-135) + a(n-136) + a(n-137) - a(n-138) - a(n-150) + a(n-151) + a(n-152) - a(n-153) + a(n-155) - a(n-156) - a(n-157) + a(n-158) + a(n-160) - a(n-161) - a(n-162) + a(n-163) - a(n-165) + a(n-166) + a(n-167) - a(n-168) + a(n-170) - a(n-171) - a(n-172) + a(n-173) - a(n-175) + a(n-176) + a(n-177) - a(n-178) - a(n-180) + a(n-181) + a(n-182) - a(n-183) + a(n-185) - a(n-186) - a(n-187) + a(n-188) + a(n-200) - a(n-201) - a(n-202) + a(n-203) - a(n-205) + a(n-206) + a(n-207) - a(n-208) - a(n-210) + a(n-211) + a(n-212) - a(n-213) + a(n-215) - a(n-216) - a(n-217) + a(n-218) - a(n-220) + a(n-221) + a(n-222) - a(n-223) + a(n-225) - a(n-226) - a(n-227) + a(n-228) + a(n-230) - a(n-231) - a(n-232) + a(n-233) - a(n-235) + a(n-236) + a(n-237) - a(n-238) - a(n-250) + a(n-251) + a(n-252) - a(n-253) + a(n-255) - a(n-256) - a(n-257) + a(n-258) + a(n-260) - a(n-261) - a(n-262) + a(n-263) - a(n-265) + a(n-266) + a(n-267) - a(n-268) + a(n-270) - a(n-271) - a(n-272) + a(n-273) - a(n-275) + a(n-276) + a(n-277) - a(n-278) - a(n-280) + a(n-281) + a(n-282) - a(n-283) + a(n-285) - a(n-286) - a(n-287) + a(n-288) - a(n-300) + a(n-301) + a(n-302) - a(n-303) + a(n-305) - a(n-306) - a(n-307) + a(n-308) + a(n-310) - a(n-311) - a(n-312) + a(n-313) - a(n-315) + a(n-316) + a(n-317) - a(n-318) + a(n-320) - a(n-321) - a(n-322) + a(n-323) - a(n-325) + a(n-326) + a(n-327) - a(n-328) - a(n-330) + a(n-331) + a(n-332) - a(n-333) + a(n-335) - a(n-336) - a(n-337) + a(n-338) + a(n-350) - a(n-351) - a(n-352) + a(n-353) - a(n-355) + a(n-356) + a(n-357) - a(n-358) - a(n-360) + a(n-361) + a(n-362) - a(n-363) + a(n-365) - a(n-366) - a(n-367) + a(n-368) - a(n-370) + a(n-371) + a(n-372) - a(n-373) + a(n-375) - a(n-376) - a(n-377) + a(n-378) + a(n-380) - a(n-381) - a(n-382) + a(n-383) - a(n-385) + a(n-386) + a(n-387) - a(n-388);
+        return arr[n];
     }
-    cout << "Number of solutions: " << numSolutions << endl;
+}
+
+int main(){
+    arr = new int[201];
+    cout << a(200) << endl;
 }
