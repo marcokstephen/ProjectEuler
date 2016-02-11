@@ -76,6 +76,7 @@
 - **[Problem 98 (Java)](Solutions/Problem98.java)**
 - **[Problem 99 (Python)](Solutions/Problem99.py)**
 - **[Problem 100 (Racket)](Solutions/Problem100.rkt)**
+- **[Problem 105 (Java)](Solutions/Problem105.java)**
 - **[Problem 112 (Java)](Solutions/Problem112.java)**
 - **[Problem 124 (Racket)](Solutions/Problem124.rkt)**
 - **[Problem 179 (Java)](Solutions/Problem179.java)**
